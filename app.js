@@ -3,7 +3,7 @@ new Vue({
 
     data:{
         test: 'test',
-        dischiMusicali :undefined
+        dischiMusicali :undefined,
     },
 
     beforeCreate() {
@@ -15,7 +15,10 @@ new Vue({
             .then(dataAPI =>{
                 console.log(dataAPI.data.response);
                 this.dischiMusicali = dataAPI.data.response;
-
+            })
+            .catch(error =>{
+                console.log('Error in the API call');
+                console.log(error);
             })
         
     },
