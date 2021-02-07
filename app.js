@@ -2,16 +2,25 @@ new Vue({
     el:'#app',
 
     data:{
-        test: 'test'
+        test: 'test',
+        dischiMusicali :undefined
     },
 
     beforeCreate() {
-        this.callAPI();
+        
+        console.log('Call API')
+
+        axios
+            .get('https://flynn.boolean.careers/exercises/api/array/music')
+            .then(dataAPI =>{
+                console.log(dataAPI.data.response);
+                this.dischiMusicali = dataAPI.data.response;
+
+            })
+        
     },
-    
+
     methods: {
-        callAPI: function(){
-            console.log('Call API')
-        }
+        
     },
 })
