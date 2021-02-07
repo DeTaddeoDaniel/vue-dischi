@@ -28,12 +28,15 @@
             <div class="main">
 
                 <!-- main content page -->
-                <div class="flex flex-wrap justify-between flex-1 ">
-                    <div class="w-1/2 p-3">
+                <div class="flex flex-wrap justify-space flex-1 ">
+                    <div class="w-1/4 p-3">
 
                         <!-- card 1 -->
                         <div v-for="disco in dischiMusicali" class="text-gray-400 border-2 border-gray-800 p-3 ">
                             <div class="">
+                                <div class="containImg">
+                                    <img :src="disco.poster" alt="poster cd" class="mx-auto">
+                                </div>
                                 <p class="font-bold">Title: <span class="font-normal">{{disco.title}}</span></p>
                                 <p class="font-bold">Autore: <span class="font-normal">{{disco.author}}</span></p>
                                 <p class="font-bold">Genere: <span class="font-normal">{{disco.genre}}</span></p>
