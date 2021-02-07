@@ -1,0 +1,37 @@
+<!-- npx tailwindcss-cli@latest build ./src/tailwind.css -o ./dist/tailwind.css -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dischi musicali API boolean</title>
+    <link rel="stylesheet" href="css/tailwind.css">
+</head>
+<body class="bg-black">
+    <div class="wrap">
+        <div class="container mx-auto">
+            <div class="header text-gray-400 text-center">
+                <h1 class="text-3xl">Dischi musicali API boolean</h1>
+            </div>
+            <div class="main">
+                <!-- main content page -->
+                <div class="flex flex-wrap justify-between flex-1 ">
+                    <div v-for="people in arrayEmail" class="w-1/2 p-3" v-if="arrayEmail.length == numMaxEmail">
+
+                        <!-- card 1 -->
+                        <div class="text-gray-400 border-2 border-gray-800 p-3 ">
+                            <div class="">
+                                <p class="font-bold">Name: <span class="font-normal">{{people.name}}</span></p>
+                                <p class="font-bold">Mail: <span class="font-normal">{{people.mail}}</span></p>
+                                <p class="font-bold">Telefono: <span class="font-normal">{{people.phone}}</span></p>
+                            </div>
+                        </div>
+                  
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
