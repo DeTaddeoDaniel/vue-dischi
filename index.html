@@ -32,12 +32,12 @@
                 <div class="mt-5">
                     <span class="text-gray-500">Scegli un genere dell'album per filtrare tutti i dschi musicali</span>
                     
-                    <select name="select" id="SelectGenere">
-                        <option value="all">All</option>
-                        <option value="pop">Pop</option>
-                        <option value="rock">Rock</option>
-                        <option value="metal">Metal</option>
-                        <option value="jazz">Jazz</option>
+                    <select v-model="selected" @change="filtrer">
+                        <option value="All">All</option>
+                        <option value="Pop">Pop</option>
+                        <option value="Rock">Rock</option>
+                        <option value="Metal">Metal</option>
+                        <option value="Jazz">Jazz</option>
                     </select>
 
                 </div>

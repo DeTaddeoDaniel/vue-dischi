@@ -3,6 +3,7 @@ new Vue({
 
     data:{
         test: 'test',
+        selected: "All",
         dischiMusicali :undefined,
     },
 
@@ -38,6 +39,23 @@ new Vue({
     },
 
     methods: {
+        filtrer: function(){
 
+            this.dischiMusicali.forEach( disco =>{
+                
+                // no search
+                if( this.selected != 'All' ){
+                    if(this.selected == disco.genre){
+                        disco.visibility = true;
+                    } else {
+                        disco.visibility = false;
+                    }
+                
+                // no search
+                } else {
+                    disco.visibility = true;
+                }
+            })
+        }
     },
 })
