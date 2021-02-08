@@ -22,15 +22,16 @@
         <div class="container mx-auto" id="app">
 
             <div class="header text-gray-400 text-center">
-                <h1 class="text-3xl">Dischi musicali API boolean</h1>
+                <h1 class="text-6xl">Dischi musicali API boolean</h1>
             </div>
             
             <div class="main">
 
                 <!-- main content page -->
 
-                <div class="mt-5 pl-6">
-                    <span class="text-gray-500">Scegli un genere dell'album per filtrare tutti i dschi musicali</span>
+                <div class="mt-5 text-2xl">
+                    
+                    <span class="text-gray-500 text-3xl pr-3">Scegli un genere dell'album per filtrare tutti i dischi musicali</span>
                     
                     <select v-model="selected" @change="filtrer">
                         <option value="All">All</option>
@@ -38,6 +39,19 @@
                         <option value="Rock">Rock</option>
                         <option value="Metal">Metal</option>
                         <option value="Jazz">Jazz</option>
+                    </select>
+
+                </div>
+
+                <div class="mt-5 text-2xl pb-5 border-b-2">
+                    <span class="text-gray-500 text-3xl pr-3">Cerca un autore o il titolo del cd</span>
+                    
+                    <input class="text-gray-400 bg-black border-2 px-4 rounded-full focus:outline-none"  
+                            v-model="textSearch" @input="filtrer" @keyup.enter="resetInputSearch" type="text" placeholder="Cerca titolo o autore" >
+                    
+                    <select v-model="selectedSearch" @change="filtrer">
+                        <option value="Author">Autore</option>
+                        <option value="Title">Titolo</option>
                     </select>
 
                 </div>
@@ -49,7 +63,7 @@
                             <div class="card-content border-2 text-gray-400">
                                 <div class="card-content-section">
 
-                                    <div class="card-header border-gray-800 border-b-2">
+                                    <div class="card-header border-gray-800 border-b-2 p-6">
                                         <img :src="disco.poster" alt="poster cd" class="mx-auto">
                                     </div>
 
