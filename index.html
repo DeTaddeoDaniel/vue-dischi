@@ -28,10 +28,21 @@
             <div class="main">
 
                 <!-- main content page -->
-                <div class="sm:flex sm:flex-wrap sm:justify-space sm:flex-1 p-3 mx-auto">
+
+                <div class="mt-5">
+                    <span class="text-gray-500">Scegli un genere dell'album per filtrare tutti i dschi musicali</span>
+                    
                     <select name="select" id="SelectGenere">
-                        <option value="All"></option>
+                        <option value="all">All</option>
+                        <option value="pop">Pop</option>
+                        <option value="rock">Rock</option>
+                        <option value="metal">Metal</option>
+                        <option value="jazz">Jazz</option>
                     </select>
+
+                </div>
+                
+                <div class="sm:flex sm:flex-wrap sm:justify-space sm:flex-1 p-3 mx-auto">
 
                         <!-- card 1 -->
                         <div v-for="disco in dischiMusicali" v-if="disco.visibility" class="lg:w-1/4 sm:w-1/2 sm:items-strech text-gray-400 border-gray-800 p-3 ">
