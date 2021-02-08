@@ -24,7 +24,7 @@ new Vue({
                     this.dischiMusicali[index] = disco
                 })
 
-                // ordinamento per valore
+                // ordinamento per anno d'uscita
                 this.dischiMusicali = this.dischiMusicali.sort(function (a, b) {
                     return a.year - b.year;
                 });
@@ -39,6 +39,8 @@ new Vue({
     },
 
     methods: {
+
+        // filtra dischi per genere musicali
         filtrer: function(){
 
             this.dischiMusicali.forEach( disco =>{

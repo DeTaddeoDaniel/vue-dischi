@@ -29,7 +29,7 @@
 
                 <!-- main content page -->
 
-                <div class="mt-5">
+                <div class="mt-5 pl-6">
                     <span class="text-gray-500">Scegli un genere dell'album per filtrare tutti i dschi musicali</span>
                     
                     <select v-model="selected" @change="filtrer">
@@ -42,19 +42,25 @@
 
                 </div>
                 
-                <div class="sm:flex sm:flex-wrap sm:justify-space sm:flex-1 p-3 mx-auto">
+                <div class="flex flex-wrap justify-space flex-1 mx-auto">
 
                         <!-- card 1 -->
-                        <div v-for="disco in dischiMusicali" v-if="disco.visibility" class="lg:w-1/4 sm:w-1/2 sm:items-strech text-gray-400 border-gray-800 p-3 ">
-                            <div class="border-gray-800">
-                                <div class="text-center md:text-left px-6">
-                                    <div class="containImg">
-                                        <img :src="disco.poster" alt="poster cd" class="mx-auto max-h-52">
+                        <div v-for="disco in dischiMusicali" v-if="disco.visibility" class="card p-3 w-1/4 p-6">
+                            <div class="card-content border-2 text-gray-400">
+                                <div class="card-content-section">
+
+                                    <div class="card-header border-gray-800 border-b-2">
+                                        <img :src="disco.poster" alt="poster cd" class="mx-auto">
                                     </div>
-                                    <p class="font-bold">Title: <span class="font-normal">{{disco.title}}</span></p>
-                                    <p class="font-bold">Autore: <span class="font-normal">{{disco.author}}</span></p>
-                                    <p class="font-bold">Genere: <span class="font-normal">{{disco.genre}}</span></p>
-                                    <p class="font-bold">Anno: <span class="font-normal">{{disco.year}}</span></p>
+
+                                    <div class="card-main p-6 text-2xl">
+
+                                        <p class="font-bold">Title: <span class="font-normal">{{disco.title}}</span></p>
+                                        <p class="font-bold">Autore: <span class="font-normal">{{disco.author}}</span></p>
+                                        <p class="font-bold">Genere: <span class="font-normal">{{disco.genre}}</span></p>
+                                        <p class="font-bold">Anno: <span class="font-normal">{{disco.year}}</span></p>
+
+                                    </div>
                                 </div>
                             </div>
                         </div>
