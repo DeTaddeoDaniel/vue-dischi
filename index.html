@@ -29,13 +29,16 @@
 
                 <!-- main content page -->
                 <div class="sm:flex sm:flex-wrap sm:justify-space sm:flex-1 p-3 mx-auto">
+                    <select name="select" id="SelectGenere">
+                        <option value="All"></option>
+                    </select>
 
                         <!-- card 1 -->
-                        <div v-for="disco in dischiMusicali" class="lg:w-1/4 sm:w-1/2 sm:items-strech text-gray-400 border-gray-800 p-3 ">
+                        <div v-for="disco in dischiMusicali" v-if="disco.visibility" class="lg:w-1/4 sm:w-1/2 sm:items-strech text-gray-400 border-gray-800 p-3 ">
                             <div class="border-gray-800">
-                                <div class="text-center md:text-left">
+                                <div class="text-center md:text-left px-6">
                                     <div class="containImg">
-                                        <img :src="disco.poster" alt="poster cd" class="mx-auto">
+                                        <img :src="disco.poster" alt="poster cd" class="mx-auto max-h-52">
                                     </div>
                                     <p class="font-bold">Title: <span class="font-normal">{{disco.title}}</span></p>
                                     <p class="font-bold">Autore: <span class="font-normal">{{disco.author}}</span></p>
