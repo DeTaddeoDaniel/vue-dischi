@@ -11,7 +11,7 @@ body {
 }
 
 .container {
-    width: 1070px;
+    max-width: 1070px;
     height: 100%;
     margin: 0 auto;
 }
@@ -32,7 +32,7 @@ header img {
 
 .cds-container {
     display: flex;
-    justify-content: center;
+    justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
     padding: 100px 0;
