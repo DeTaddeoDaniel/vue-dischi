@@ -24,10 +24,21 @@ header {
     align-items: center;
     color: rgba(255, 255, 255, .8);
 }
+
 header img {
     height: 50px;
     margin-top: 10px;
     margin-right: 20px;
+}
+
+section{
+    padding-top: 50px 0;
+    font-size: 1.5rem;
+    color: rgba(255, 255, 255, .8);
+}
+
+section input{
+    font-size: 1.7rem;
 }
 
 .cds-container {
@@ -35,7 +46,7 @@ header img {
     justify-content: flex-start;
     align-items: center;
     flex-wrap: wrap;
-    padding: 100px 0;
+    padding: 50px 0;
 }
 
 .cd {
