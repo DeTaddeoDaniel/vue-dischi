@@ -70,34 +70,34 @@ new Vue({
                 }
 
                 // search generi musicali
-                // let search = this.textSearch.toLowerCase();
-                // let typeSearch = this.selectedSearch.toLowerCase();
-                // let title = disco.title.toLowerCase();
-                // let autore= disco.author.toLowerCase();
+                let search = this.textSearch.toLowerCase();
+                let typeSearch = this.selectedSearch.toLowerCase();
+                let title = disco.title.toLowerCase();
+                let autore= disco.author.toLowerCase();
 
                 // entra se testo diverso da stringa vuota e disco visibile dopo filtraggio genere
-                // if( search != "" && disco.visibility){
+                if( search != "" && disco.visibility){
                     
-                //     // controlla autore
-                //     if(typeSearch == 'author'){
+                    // controlla autore
+                    if(typeSearch == 'author'){
                         
-                //         if(autore.includes(search)){
-                //             disco.visibility = true;
-                //         } else {
-                //             disco.visibility = false;
-                //         }
+                        if(autore.includes(search)){
+                            disco.visibility = true;
+                        } else {
+                            disco.visibility = false;
+                        }
 
-                //     // controlla titolo album
-                //     } else if(typeSearch == 'title'){
+                    // controlla titolo album
+                    } else if(typeSearch == 'title'){
                         
-                //         if(title.includes(search)){
-                //             disco.visibility = true;
-                //         } else {
-                //             disco.visibility = false;
-                //         }
+                        if(title.includes(search)){
+                            disco.visibility = true;
+                        } else {
+                            disco.visibility = false;
+                        }
 
-                //     }
-                // }
+                    }
+                }
             })
         },
 

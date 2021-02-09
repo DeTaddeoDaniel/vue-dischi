@@ -44,6 +44,19 @@
 
             </section>
 
+            <section class="container">
+                    <span class="text-gray-500 text-3xl pr-3">Cerca un autore o il titolo del cd</span>
+                    
+                    <input class="text-gray-400 bg-black border-2 px-4 rounded-full focus:outline-none"  
+                            v-model="textSearch" @input="filtrer" @keyup.enter="resetInputSearch" type="text" placeholder="Cerca titolo o autore" >
+                    
+                    <select v-model="selectedSearch" @change="filtrer">
+                        <option value="Author">Autore</option>
+                        <option value="Title">Titolo</option>
+                    </select>
+
+                </section>
+
             <div class="cds-container container" id="app">
                 <!-- Disco ad esempio -->
                 <div class="cd" v-for="disco in dischiMusicali" v-if="disco.visibility">
