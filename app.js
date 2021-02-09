@@ -21,13 +21,13 @@ new Vue({
                 this.dischiMusicali = dataAPI.data.response;
                 
                 // add to visibility item variable
-                this.dischiMusicali.forEach( (disco, index) => {
+                this.dischiMusicali.map( (disco, index) =>{
                     disco = { ...disco, visibility : true};
                     this.dischiMusicali[index] = disco
                 })
 
                 // ordinamento per anno d'uscita
-                this.dischiMusicali = this.dischiMusicali.sort(function (a, b) {
+                this.dischiMusicali.sort(function (a, b) {
                     return a.year - b.year;
                 });
 
